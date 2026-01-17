@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>PinkSoft Company</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="top-header">
+    <div class="logo-area">
+       <div class="logo">
+    <img src="D:\Folder kuliah\WEB 1\UAS\company-profile\img\logo.png" alt="PinkSoft Logo">
+</div>
+
+        <div>
+            <h2 data-lang="company-name">PinkSoft Company</h2>
+            <p data-lang="company-desc">Creative Digital & Web Solution</p>
+        </div>
+    </div>
+    <div class="lang">
+        <button onclick="changeLang('en')">EN</button>
+        <button onclick="changeLang('id')">ID</button>
+    </div>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <ul>
+        <li data-lang="nav-home" onclick="scrollToSection('hero')">Home</li>
+        <li data-lang="nav-products" onclick="scrollToSection('story')">Products</li>
+        <li data-lang="nav-download" onclick="scrollToSection('newsletter')">Download</li>
+        <li data-lang="nav-buy">Buy Now</li>
+        <li data-lang="nav-support">Support</li>
+        <li data-lang="nav-about">About Us</li>
+    </ul>
+    <input type="text" placeholder="Search product..." data-lang-placeholder="search-placeholder">
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <p data-lang="hero-text">We Build Modern & Elegant Digital Products</p>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+<main class="content">
+
+<h3 id="story" data-lang="story-title">Top Story Headline</h3>
+<div class="story card">
+    <!-- Foto statis diubah jadi img -->
+    <div class="story-img">
+        <img src="D:\Folder kuliah\WEB 1\UAS\company-profile\img\img1.jpg" alt="Product Image">
+    </div>
+    <div class="story-text">
+        <p data-lang="story-1">PinkSoft Company adalah perusahaan teknologi kreatif yang berfokus pada pengembangan website, aplikasi, dan solusi digital modern untuk kebutuhan bisnis skala kecil hingga besar.</p>
+        <p data-lang="story-2">Kami mengutamakan desain yang elegan, performa tinggi, serta kemudahan penggunaan bagi klien kami.</p>
+        <div class="btn-group">
+            <button class="btn" data-lang="btn-download">Download</button>
+            <button class="btn outline" data-lang="btn-purchase">Purchase</button>
+        </div>
+    </div>
+</div>
+
+<h4 id="newsletter" data-lang="newsletter-title">Monthly Newsletter</h4>
+<p data-lang="newsletter-desc">Dapatkan update bulanan seputar teknologi, desain, dan produk terbaru dari PinkSoft Company.</p>
+<div class="newsletter">
+    <div class="news-box card" data-lang="news-ui">UI Design</div>
+    <div class="news-box card" data-lang="news-web">Web App</div>
+    <div class="news-box card" data-lang="news-mobile">Mobile App</div>
+    <div class="news-box card" data-lang="news-tips">Tips IT</div>
+</div>
+
+<!-- REVIEW INTERAKTIF -->
+<h4 data-lang="reviews-title">User Reviews</h4>
+<div id="reviews-list"></div>
+
+<!-- TOTAL RATING -->
+<p id="total-rating" style="color:#e91e63;font-weight:bold;margin-bottom:10px;">Average Rating: 0 ★</p>
+
+<!-- FORM KOMENTAR DENGAN BINTANG INTERAKTIF -->
+<div class="review-form card">
+    <h5>Add Your Comment</h5>
+    <div class="star-rating" id="starRating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+    </div>
+    <input type="text" id="username" placeholder="Your name" style="width:100%; padding:8px; margin:8px 0; border-radius:5px; border:1px solid #f6c1d1;">
+    <textarea id="comment" placeholder="Write your comment..." style="width:100%; padding:8px; border-radius:5px; border:1px solid #f6c1d1; margin-bottom:8px;"></textarea>
+    <button class="btn" onclick="addComment()">Submit</button>
+</div>
+
+</main>
+
+<aside class="box card">
+<h4 data-lang="sidebar-title">Company Profile</h4>
+<iframe width="100%" height="180" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Company Profile Video" frameborder="0" allowfullscreen></iframe>
+<button class="share" data-lang="btn-watch">Watch Video</button>
+
+<!-- PRODUCT DUMMY -->
+<h5>OUR PRODUCTS</h5>
+<div class="product-list">
+    <div class="product-item">Logo Design</div>
+    <div class="product-item">Web Template</div>
+    <div class="product-item">Mobile App</div>
+    <div class="product-item">Brand Identity</div>
+</div>
+</aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+<p>
+<a href="#" data-lang="footer-home">Home</a> |
+<a href="#" data-lang="footer-products">Products</a> |
+<a href="#" data-lang="footer-privacy">Privacy</a> |
+<a href="#" data-lang="footer-terms">Terms</a> |
+<a href="#" data-lang="footer-sitemap">Site Map</a>
+</p>
+<p>© 2026 PinkSoft Company. All Rights Reserved.</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backTop" onclick="scrollToTop()">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
